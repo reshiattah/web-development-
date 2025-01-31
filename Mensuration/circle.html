@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculator</title>
+    <style>
+      
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+p#result {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Circle Calculator</h1>
+    <img src="circle.png" alt=""style="height: 300px; width: 300px;">
+    <label for="radius">Radius:</label>
+    <input type="number" id="radius" placeholder="Enter radius">
+    <br>
+    <label for="calculationType">Select calculation:</label>
+    <select id="calculationType">
+        <option value="area">Area</option>
+        <option value="circumference">Circumference</option>
+    </select>
+    <br>
+    <button onclick="calculate()">Calculate</button>
+    <br>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            const radius = parseFloat(document.getElementById('radius').value);
+            const calculationType = document.getElementById('calculationType').value;
+
+            if (!isNaN(radius)) {
+                if (calculationType === 'area') {
+                    const area = Math.PI * radius ** 2;
+                    document.getElementById('result').textContent = `Area: ${area.toFixed(2)}`;
+                } else if (calculationType === 'circumference') {
+                    const circumference = 2 * Math.PI * radius;
+                    document.getElementById('result').textContent = `Circumference: ${circumference.toFixed(2)}`;
+                }
+            } else {
+                alert('Please enter a valid numeric value for the radius.');
+            }
+        }
+    </script>
+</body>
+</html>

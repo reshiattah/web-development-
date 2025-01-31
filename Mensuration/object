@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        let tawqeerdetails =
+        {
+            "fathers name" : "altaf ahmad",
+            "full address" : "hamzah colony",
+
+              age:function()
+              {
+                document.write(`My Age is 19  <br> My Age is My fame`); 
+              }
+        };
+        tawqeerdetails.age();
+
+        let
+    </script>
