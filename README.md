@@ -8,13 +8,3 @@ This repository showcases my web development journey through various projects. E
 2. **Single Page App**: Dynamic web app with React/Vue/Angular.
 3. **E-commerce Site**: Mock platform with product listing, filtering, and cart.
 4. **API Integration**: Fetching and displaying data from third-party APIs.
-
-## Goals:
-
-- Solidify web development principles.
-- Apply concepts in real-world scenarios.
-- Continuously improve based on feedback.
-
-Explore, suggest improvements, or reach out with questions!
-
----
