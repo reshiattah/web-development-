@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Bar</title>
+    <link rel="stylesheet" href="google.css">
+</head>
+<body>
+    <div class="search-container">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search Google or type a URL" id="searchInput">
+            <button class="search-button" onclick="searchGoogle()">Google Search</button>
+            <button class="search-button" onclick="searchGoogle()">I'm Feeling Lucky</button>
+            <button class="voice-search-button" onclick="startVoiceSearch()">
+                <img src="https://img.icons8.com/ios-filled/50/000000/microphone.png" alt="Microphone Icon" class="microphone-icon">
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        function searchGoogle() {
+            const query = document.getElementById('searchInput').value;
+            window.location.href = `https://www.google.com/search?q=${query}`;
+        }
+
+
+        function startVoiceSearch() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'en-US';
+            recognition.start();
+            recognition.onresult = function(event) {
+                const query = event.results[0][0].transcript;
+                document.getElementById('searchInput').value = query;
+                searchGoogle();
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "D:/Zahid Sir"
+		},
+		{
+			"path": "../../../../../../../College IT"
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"cSpell.words": [
+			"Reshi"
+		],
+		"liveServer.settings.multiRootWorkspaceName": "Desktop"
+	}
+}
